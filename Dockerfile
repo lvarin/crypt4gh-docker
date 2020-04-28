@@ -4,3 +4,5 @@ RUN apk add gcc libressl-dev musl-dev libffi-dev make
 
 RUN pip3 install crypt4gh
 
+CMD ["crypt4gh"]
+
