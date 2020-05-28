@@ -11,7 +11,7 @@ PUBLIC_KEY=$2
 C4GH_PASSPHRASE=$3
 shift 3
 
-if [ -z "${SECRET_KEY}" ];
+if [ -z "${SECRET_KEY}" -o ! -f "${SECRET_KEY}" ];
 then
   echo "Cannot find SECRET_KEY" >&2
   help;
@@ -19,7 +19,7 @@ then
 fi
 
 
-if [ -z "${PUBLIC_KEY}" ];
+if [ -z "${PUBLIC_KEY}" -o ! -f "${PUBLIC_KEY}" ];
 then
   echo "Cannot find PUBLIC_KEY" >&2
   help;
