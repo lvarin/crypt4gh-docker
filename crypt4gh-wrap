@@ -8,7 +8,7 @@ echo "Use: $0 <SECRET_KEY> <PUBLIC_KEY> <C4GH_PASSPHRASE> <FILE1> [<FILE2> ...]"
 
 SECRET_KEY=$1
 PUBLIC_KEY=$2
-C4GH_PASSPHRASE=$3
+export C4GH_PASSPHRASE=$3
 shift 3
 
 if [ -z "${SECRET_KEY}" -o ! -f "${SECRET_KEY}" ];
