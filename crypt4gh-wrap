@@ -47,3 +47,6 @@ do
   set +x
   echo "Created file: ${file}.g4h"
 done
+
+ls -l $(dirname $1)
+
